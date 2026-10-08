@@ -13,6 +13,18 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap',
+        destination: '/sitemap.xml',
+      },
+      {
+        source: '/sitemap_index.xml',
+        destination: '/sitemap.xml',
+      },
+    ];
+  },
   webpack: (config) => {
     config.resolve.alias['@'] = path.resolve(__dirname);
     return config;
