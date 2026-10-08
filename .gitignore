@@ -43,6 +43,7 @@ test_parser.js
 verify_home.js
 audit_site.js
 generate_sitemap.js
+verify_live_domain.js
 extracted_content.json
 
 .vercel
