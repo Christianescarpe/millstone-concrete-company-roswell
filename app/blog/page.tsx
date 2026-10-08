@@ -1,18 +1,43 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { blogPosts, COMPANY_INFO } from '@/data/content';
+import { blogPosts, COMPANY_INFO, SITE_URL, getCanonicalUrl } from '@/data/content';
 import { ArrowRight } from 'lucide-react';
 import PhoneCTA from '@/components/PhoneCTA';
+import SchemaScript from '@/components/SchemaScript';
+import { getBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Blog | Millstone Concrete Company Roswell',
-  description: 'Articles and guides from Millstone Concrete Company in Roswell, GA.',
+  description: 'Articles and guides on concrete driveway costs, stamped concrete, curing times, and slab maintenance from Millstone Concrete Company in Roswell, GA.',
+  alternates: {
+    canonical: getCanonicalUrl('/blog/'),
+  },
+  openGraph: {
+    title: 'Blog | Millstone Concrete Company Roswell',
+    description: 'Articles and guides on concrete driveway costs, stamped concrete, curing times, and slab maintenance from Millstone Concrete Company in Roswell, GA.',
+    url: getCanonicalUrl('/blog/'),
+    type: 'website',
+    images: [
+      {
+        url: `${SITE_URL}/images/blog-curing-time.webp`,
+        width: 1200,
+        height: 630,
+        alt: 'Millstone Concrete Articles & Guides',
+      },
+    ],
+  },
 };
 
 export default function BlogHubPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: `${SITE_URL}/` },
+    { name: 'Blog', url: getCanonicalUrl('/blog/') }
+  ];
+
   return (
     <div className="bg-[#0c0d0f] min-h-screen text-gray-200">
+      <SchemaScript schema={getBreadcrumbSchema(breadcrumbs)} />
       
       {/* Hero */}
       <section className="relative pt-12 pb-16 md:py-20 border-b border-dark-border bg-dark-surface/60 overflow-hidden bg-grid-pattern">

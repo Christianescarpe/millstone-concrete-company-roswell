@@ -41,4 +41,8 @@ copy_images.js
 test_server.js
 test_parser.js
 verify_home.js
+audit_site.js
+generate_sitemap.js
 extracted_content.json
+
+.vercel

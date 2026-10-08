@@ -19,6 +19,8 @@ export interface PageData {
   featuredImage?: string;
 }
 
+export const SITE_URL = 'https://www.concretecontractorroswell.site';
+
 export const COMPANY_INFO = {
   name: "Millstone Concrete Company Roswell",
   shortName: "Millstone Concrete",
@@ -27,6 +29,14 @@ export const COMPANY_INFO = {
   address: "11007 Alpharetta Hwy, Roswell, GA 30076, United States",
   mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.7936970868004!2d-84.33830329999999!3d34.04845830000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f575801a683b4f%3A0xe98063d08ce25d32!2sMillstone%20Concrete%20Company%20Roswell!5e1!3m2!1sen!2sph!4v1791378874103!5m2!1sen!2sph"
 };
+
+export function getCanonicalUrl(cleanSlug: string): string {
+  let s = cleanSlug.trim();
+  if (!s.startsWith('/')) s = '/' + s;
+  if (!s.endsWith('/')) s = s + '/';
+  if (s === '//') s = '/';
+  return s === '/' ? `${SITE_URL}/` : `${SITE_URL}${s}`;
+}
 
 const imageMappingBySlug: Record<string, string> = {
   '/': '/images/hero-concrete.webp',

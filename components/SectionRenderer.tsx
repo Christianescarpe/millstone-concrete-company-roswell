@@ -74,7 +74,7 @@ export default function SectionRenderer({ page }: SectionRendererProps) {
                 <div className="aspect-[4/3] relative">
                   <Image
                     src={page.featuredImage || '/images/hero-concrete.webp'}
-                    alt={parsed.h1}
+                    alt={`${parsed.h1} - Millstone Concrete Company Roswell, GA`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                     priority
@@ -170,7 +170,7 @@ export default function SectionRenderer({ page }: SectionRendererProps) {
                       <div className="aspect-[4/3] relative">
                         <Image
                           src={section.image}
-                          alt={section.h2}
+                          alt={`${section.h2} - Millstone Concrete Company Roswell`}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-700"
                         />
