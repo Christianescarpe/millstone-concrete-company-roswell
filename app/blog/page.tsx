@@ -8,13 +8,13 @@ import SchemaScript from '@/components/SchemaScript';
 import { getBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Blog | Millstone Concrete Company Roswell',
+  title: 'Concrete Blog & Guides',
   description: 'Articles and guides on concrete driveway costs, stamped concrete, curing times, and slab maintenance from Millstone Concrete Company in Roswell, GA.',
   alternates: {
     canonical: getCanonicalUrl('/blog/'),
   },
   openGraph: {
-    title: 'Blog | Millstone Concrete Company Roswell',
+    title: 'Concrete Blog & Guides',
     description: 'Articles and guides on concrete driveway costs, stamped concrete, curing times, and slab maintenance from Millstone Concrete Company in Roswell, GA.',
     url: getCanonicalUrl('/blog/'),
     type: 'website',

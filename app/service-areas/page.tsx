@@ -5,7 +5,7 @@ import SchemaScript from '@/components/SchemaScript';
 import { getBreadcrumbSchema, getFaqSchema, getLocalBusinessSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: serviceAreasHubPage?.seoTitle || 'Concrete Contractor Service Areas | Millstone Concrete',
+  title: serviceAreasHubPage?.seoTitle || 'Concrete Contractor Service Areas',
   description: serviceAreasHubPage?.metaDescription || 'Millstone Concrete Company serves Roswell and surrounding North Atlanta communities.',
   alternates: {
     canonical: getCanonicalUrl('/service-areas/'),

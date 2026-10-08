@@ -6,10 +6,7 @@ import { SITE_URL } from '@/data/content';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    template: '%s | Millstone Concrete Company',
-    default: 'Concrete Contractor Roswell GA | Millstone Concrete Company',
-  },
+  title: 'Concrete Contractor Roswell GA',
   description: 'Millstone Concrete Company is a Roswell, GA concrete contractor for driveways, patios, stamped concrete and repairs. Call for a free estimate.',
   verification: {
     google: 'nIGwFA4jSJnJbOv7IbN_eNnTLqv9FOYUluGRDr0t7xs',
@@ -30,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: `${SITE_URL}/`,
     siteName: 'Millstone Concrete Company Roswell',
-    title: 'Concrete Contractor Roswell GA | Millstone Concrete Company',
+    title: 'Concrete Contractor Roswell GA',
     description: 'Millstone Concrete Company is a Roswell, GA concrete contractor for driveways, patios, stamped concrete and repairs. Call for a free estimate.',
     images: [
       {
@@ -43,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Concrete Contractor Roswell GA | Millstone Concrete Company',
+    title: 'Concrete Contractor Roswell GA',
     description: 'Millstone Concrete Company is a Roswell, GA concrete contractor for driveways, patios, stamped concrete and repairs.',
     images: [`${SITE_URL}/images/hero-concrete.webp`],
   },

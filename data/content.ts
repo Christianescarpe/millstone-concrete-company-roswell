@@ -77,9 +77,15 @@ const imageMappingBySlug: Record<string, string> = {
   '/blog/prevent-concrete-cracks/': '/images/blog-prevent-cracks.webp',
 };
 
+export function cleanSeoTitle(title: string): string {
+  if (!title) return '';
+  return title.split('|')[0].trim();
+}
+
 export const allPages: PageData[] = (pagesJson as any[]).map((p) => {
   return {
     ...p,
+    seoTitle: cleanSeoTitle(p.seoTitle),
     featuredImage: imageMappingBySlug[p.cleanSlug] || '/images/hero-concrete.webp'
   };
 });
